@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: jdt17.spring.dasar.challenge
+server:
+  port: 8081
