@@ -2,15 +2,13 @@ package com.indivaragroup.jdt17.spring.dasar.challenge.service;
 
 import com.indivaragroup.jdt17.spring.dasar.challenge.model.impl.Student;
 import com.indivaragroup.jdt17.spring.dasar.challenge.repository.StudentRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class StudentService {
-    private StudentRepository studentRepository;
-
-    public StudentService(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
-    }
+    private final StudentRepository studentRepository;
 
     public void addStudent(int id, String name) {
         Student student = new Student(id, name);

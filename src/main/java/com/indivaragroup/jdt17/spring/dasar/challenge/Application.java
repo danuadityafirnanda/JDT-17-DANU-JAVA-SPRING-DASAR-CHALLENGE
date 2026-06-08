@@ -2,10 +2,8 @@ package com.indivaragroup.jdt17.spring.dasar.challenge;
 
 import com.indivaragroup.jdt17.spring.dasar.challenge.configuration.AppConfig;
 import com.indivaragroup.jdt17.spring.dasar.challenge.model.Animal;
-import com.indivaragroup.jdt17.spring.dasar.challenge.runner.CalculatorRunner;
 import com.indivaragroup.jdt17.spring.dasar.challenge.service.AnimalService;
 import com.indivaragroup.jdt17.spring.dasar.challenge.service.GreetingService;
-import com.indivaragroup.jdt17.spring.dasar.challenge.service.StudentService;
 import com.indivaragroup.jdt17.spring.dasar.challenge.service.UserSession;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,9 +20,10 @@ public class Application {
 		challenge3(context);
 		challenge4(context);
 		challenge5(context);
-		challenge6(context);
-		challenge7();
-		challenge8(context);
+//		challenge6(); // Pakai Application Runner
+//		challenge7(); // Auto run
+//		challenge8(); // Pakai Application Runner
+//		finalChallenge(); // Pakai Application Runner
 	}
 
 	public static void challenge1(ApplicationContext context){
@@ -82,10 +81,8 @@ public class Application {
 		System.out.println(context.getBean(AppConfig.class).applicationName());
 	}
 
-	public static void challenge6(ApplicationContext context){
-		CalculatorRunner calculator = context.getBean(CalculatorRunner.class);
-
-		calculator.run();
+	public static void challenge6(){
+		// pakai aplication runner
 	}
 
 	public static void challenge7(){
@@ -93,25 +90,12 @@ public class Application {
 		// saat aplikasi stop akan di destroy
 	}
 
-	public static void challenge8(ApplicationContext context){
-		StudentService studentService = context.getBean(StudentService.class);
-
-//		studentService.findStudentById(2);
-
-		// add students
-		studentService.addStudent(1, "Budi");
-		studentService.addStudent(2, "Andi");
-		studentService.addStudent(3, "Siti");
-
-		// find by id
-		studentService.findStudentById(4);
-
-		// get all students
-		studentService.getAllStudents();
+	public static void challenge8(){
+		// Pake Application Runner
 	}
 
-	public static void finalChallenge(ApplicationContext context){
-
+	public static void finalChallenge(){
+		// Pake Aplication Runner
 	}
 
 }
