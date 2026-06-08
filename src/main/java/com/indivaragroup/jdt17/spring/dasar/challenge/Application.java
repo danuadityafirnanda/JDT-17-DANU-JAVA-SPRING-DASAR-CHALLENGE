@@ -3,6 +3,7 @@ package com.indivaragroup.jdt17.spring.dasar.challenge;
 import com.indivaragroup.jdt17.spring.dasar.challenge.configuration.AppConfig;
 import com.indivaragroup.jdt17.spring.dasar.challenge.model.Animal;
 import com.indivaragroup.jdt17.spring.dasar.challenge.service.AnimalService;
+import com.indivaragroup.jdt17.spring.dasar.challenge.service.BallService;
 import com.indivaragroup.jdt17.spring.dasar.challenge.service.GreetingService;
 import com.indivaragroup.jdt17.spring.dasar.challenge.service.UserSession;
 import org.springframework.boot.SpringApplication;
@@ -24,6 +25,7 @@ public class Application {
 //		challenge7(); // Auto run
 //		challenge8(); // Pakai Application Runner
 //		finalChallenge(); // Pakai Application Runner
+		ballChallenge(context);
 	}
 
 	public static void challenge1(ApplicationContext context){
@@ -96,6 +98,15 @@ public class Application {
 
 	public static void finalChallenge(){
 		// Pake Aplication Runner
+	}
+
+	public static void ballChallenge(ApplicationContext context){
+		BallService ballService = context.getBean(BallService.class);
+
+		ballService.setBlueBallQuantity(198);
+		ballService.setOtherBallQuantity(2);
+
+		ballService.calculateBlueBallTargetPercentage(98);
 	}
 
 }

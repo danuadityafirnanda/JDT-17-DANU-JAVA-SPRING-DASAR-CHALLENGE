@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Book {
-    private String name;
+public class Ball {
+    private String color;
+    private int quantity;
 }
